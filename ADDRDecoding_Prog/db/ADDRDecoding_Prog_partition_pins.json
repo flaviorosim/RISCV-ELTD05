@@ -1,0 +1,269 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "CS_P",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[0]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[1]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[2]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[3]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[4]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[5]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[6]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[7]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[8]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[9]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[10]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[11]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[12]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[13]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[14]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[15]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[16]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[17]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[18]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[19]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[20]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[21]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[22]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[23]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[24]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[25]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[26]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[27]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[28]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[29]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[30]",
+					"strict" : false
+				},
+				{
+					"name" : "iAddressInst[31]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[8]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[9]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[12]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[10]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[11]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[13]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[14]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[15]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[16]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[17]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[18]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[19]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[20]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[21]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[22]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[23]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[24]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[25]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[26]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[27]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[28]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[29]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[30]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[31]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[5]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

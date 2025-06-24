@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/BurguerRISCV/ADDRDecoding/simulation/modelsim
+vADDRDecoding
+!s110 1750539993
+!i10b 1
+!s100 hO]JJ<5JNSc8;C>B[82S=3
+I<MPY<7B>`<McgEn[YNOmZ3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1750539807
+8C:/BurguerRISCV/ADDRDecoding/ADDRDecoding.v
+FC:/BurguerRISCV/ADDRDecoding/ADDRDecoding.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z3 !s108 1750539993.000000
+!s107 C:/BurguerRISCV/ADDRDecoding/ADDRDecoding.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/BurguerRISCV/ADDRDecoding|C:/BurguerRISCV/ADDRDecoding/ADDRDecoding.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work +incdir+C:/BurguerRISCV/ADDRDecoding
+Z6 tCvgOpt 0
+n@a@d@d@r@decoding
+vADDRDecoding_TB
+!s110 1750539994
+!i10b 1
+!s100 O<CVQ2Hf2bnCg11<b6m][0
+I8h7;X<I8B_1Eg6l[7bdX80
+R1
+R0
+w1750539915
+8C:/BurguerRISCV/ADDRDecoding/ADDRDecoding_TB.v
+FC:/BurguerRISCV/ADDRDecoding/ADDRDecoding_TB.v
+L0 3
+R2
+r1
+!s85 0
+31
+R3
+!s107 C:/BurguerRISCV/ADDRDecoding/ADDRDecoding_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/BurguerRISCV/ADDRDecoding|C:/BurguerRISCV/ADDRDecoding/ADDRDecoding_TB.v|
+!i113 1
+R4
+R5
+R6
+n@a@d@d@r@decoding_@t@b

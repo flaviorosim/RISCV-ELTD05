@@ -1,0 +1,28 @@
+`timescale 1ns/100ps
+
+module ADDRDecoding_TB;
+    reg [31:0] addr;
+    wire CS
+
+    // Instancia o módulo
+    ADDRDecoding uut (
+        .addr(addr),
+        .CS(CS),
+    );
+
+    initial begin
+        addr = 0;
+
+        #10 addr = 32'h205;
+
+		  
+        #10 addr = 32'h24A;
+
+		 
+        #10 addr = 32'h1249;
+
+
+        $finish;
+    end
+endmodule
+

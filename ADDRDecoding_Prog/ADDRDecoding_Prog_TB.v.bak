@@ -1,0 +1,33 @@
+`timescale 1ns/1ps
+
+module ADDRDecoding_Prog_TB;
+
+    reg [31:0] addr;
+    wire CS_P;
+
+    ADDRDecoding_Prog uut (
+        .addr(addr), 
+        .CS_P(CS_P)
+    );
+
+    initial begin
+        addr = 32'h230;
+        #10;
+
+        addr = 32'h240;
+        #10;
+
+        addr = 32'h59A;
+        #10;
+
+        addr = 32'h123F;
+        #10;
+
+        // Test case 5: Address above sup (expected CS_P = 0)
+        addr = 32'h2F0F;
+        #10;
+
+        // Finaliza a simulação
+        $finish;
+    end
+endmodule

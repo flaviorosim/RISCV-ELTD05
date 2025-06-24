@@ -1,0 +1,22 @@
+module ADDRDecoding_Prog(
+    input [31:0] addr,
+    output reg CS_P
+);
+
+    localparam INF = 32'h240;
+    localparam SUP = 32'h123F; 
+	 
+    initial begin
+        CS_P = 0; 
+    end
+
+    always @(*) begin
+	 
+        if (addr >= INF && addr <= SUP) 
+            CS_P = 1;  
+        else
+            CS_P = 0;  
+    end
+
+endmodule
+	
