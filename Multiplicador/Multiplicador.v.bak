@@ -1,0 +1,61 @@
+module Multiplicador (Multiplicando, Multiplicador, Produto, Idle, Done, Clk, Rst, St);
+
+	input [3:0] Multiplicando;
+	input [3:0] Multiplicador;
+	input Clk;
+	input St;
+	input Rst;
+	output Idle;
+	output Done;
+	output [7:0] Produto;
+
+	wire Load, Sh, Ad, K, M;
+	wire [3:0] OperandoA;
+	wire [3:0] OperandoB;
+	wire [4:0] Soma;
+	wire [7:0] Produto;
+	wire [8:0] Saidas;
+	
+	
+	assign M = Saidas[0];
+	
+	ACC acc (
+		.Load(Load),
+		.Sh(Sh),
+		.Ad(Ad),
+		.Clk(Clk),
+		.Rst(Rst),
+		.Entradas({Soma, Multiplicador}),
+		.Saidas(Saidas)
+	);
+
+	assign Produto = Saidas[7:0];
+
+	Counter counter (
+		.Clk(Clk),
+		.Load(Load),
+		.K(K)
+	);
+
+
+	CONTROL control (
+		.St(St),
+		.Clk(Clk),
+		.M(M),
+		.K(K),
+		.Load(Load),
+		.Sh(Sh),
+		.Ad(Ad),
+		.Done(Done),
+		.Idle(Idle)
+	);
+
+	assign OperandoB = Saidas[7:4];
+
+	Adder adder (
+		.OperandoA(Multiplicando),
+		.OperandoB(OperandoB),
+		.Soma(Soma)
+	);
+
+endmodule

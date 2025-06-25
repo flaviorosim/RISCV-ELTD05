@@ -1,0 +1,21 @@
+module ACC (
+	input Load, Sh, Ad, Clk, Rst,
+	input [8:0] Entradas,
+	output reg [8:0] Saidas
+);
+
+always@(posedge Clk) begin
+
+	if(Rst) Saidas <= 0;
+	
+	if(Load) Saidas <= {5'b00000, Entradas[3:0]};
+	
+	if(Ad) Saidas[8:4] <= Entradas[8:4];
+	
+	if(Sh) Saidas <= Saidas >> 1;
+
+
+end
+
+endmodule
+

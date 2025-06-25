@@ -1,0 +1,70 @@
+`timescale 1ns/10ps
+
+module Multiplicador_TB;
+  
+    reg [3:0] Multiplicando;
+    reg [3:0] Multiplicador;
+    reg Clk, Rst, St;
+    
+    
+    wire [7:0] Produto;
+    wire Idle, Done;
+    
+    
+    Multiplicador DUT (
+        .Multiplicando(Multiplicando),
+        .Multiplicador(Multiplicador),
+        .Produto(Produto),
+        .Idle(Idle),
+        .Done(Done),
+        .Clk(Clk),
+        .Rst(Rst),
+        .St(St)
+    );
+    
+    
+    initial begin
+        Clk = 0;
+        forever #10 Clk = ~Clk;
+    end
+    
+    
+    initial begin
+        
+        Rst = 1;
+        St = 0;
+        Multiplicando = 0;
+        Multiplicador = 0;
+        
+        
+        #20;
+        Rst = 0;
+        
+       
+        Multiplicando = 4'b0101; // 5
+        Multiplicador = 4'b0011; // 3
+		  // tem que dar 15 = 0000 1111
+        St = 1;
+        #20 St = 0;
+        
+        
+        wait(Done);
+        #20 Rst = 1;
+		  #15 Rst = 0;
+        
+        Multiplicando = 4'b1010; // 10
+        Multiplicador = 4'b0100; // 4
+		  // tem que dar 40 = 0010 1000
+        #10 St = 1;
+        #20 St = 0;
+        
+        wait(Done);
+        #20;
+        
+    end
+	 
+	 initial 
+		#450 $stop;
+
+   
+endmodule

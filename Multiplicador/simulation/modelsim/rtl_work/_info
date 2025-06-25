@@ -1,0 +1,148 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Projects/RISCV-ELTD05/Multiplicador/simulation/modelsim
+vACC
+Z1 !s110 1750860045
+!i10b 1
+!s100 DJMB@8F_8iKDbj=H>@m1O0
+I8^M;D>Kd6SNQMz]DWja`U3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1750859124
+8C:/Projects/RISCV-ELTD05/Multiplicador/ACC/ACC.v
+FC:/Projects/RISCV-ELTD05/Multiplicador/ACC/ACC.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1750860045.000000
+!s107 C:/Projects/RISCV-ELTD05/Multiplicador/ACC/ACC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Multiplicador/ACC|C:/Projects/RISCV-ELTD05/Multiplicador/ACC/ACC.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Multiplicador/ACC
+Z6 tCvgOpt 0
+n@a@c@c
+vAdder
+R1
+!i10b 1
+!s100 LnI0Yk4[Z;];E]@FWAzD51
+IjCK;GVkLh:hUgkJT`nbc91
+R2
+R0
+w1750858759
+8C:/Projects/RISCV-ELTD05/Multiplicador/Adder/Adder.v
+FC:/Projects/RISCV-ELTD05/Multiplicador/Adder/Adder.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z7 !s108 1750860044.000000
+!s107 C:/Projects/RISCV-ELTD05/Multiplicador/Adder/Adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Multiplicador/Adder|C:/Projects/RISCV-ELTD05/Multiplicador/Adder/Adder.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Multiplicador/Adder
+R6
+n@adder
+vCONTROL
+Z8 !s110 1750860044
+!i10b 1
+!s100 gAjHLhmz2<?<X?J9Tc8K_0
+If?keS<8=0?3b;@1bI2I`a2
+R2
+R0
+w1750858216
+8C:/Projects/RISCV-ELTD05/Multiplicador/CONTROL/CONTROL.v
+FC:/Projects/RISCV-ELTD05/Multiplicador/CONTROL/CONTROL.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/Projects/RISCV-ELTD05/Multiplicador/CONTROL/CONTROL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Multiplicador/CONTROL|C:/Projects/RISCV-ELTD05/Multiplicador/CONTROL/CONTROL.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Multiplicador/CONTROL
+R6
+n@c@o@n@t@r@o@l
+vCounter
+R8
+!i10b 1
+!s100 Fc`60OT86TfhJcQeDXP<U2
+I;1JZUMRIL;256@Xl=mTk;3
+R2
+R0
+w1750859157
+8C:/Projects/RISCV-ELTD05/Multiplicador/Counter/Counter.v
+FC:/Projects/RISCV-ELTD05/Multiplicador/Counter/Counter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/Projects/RISCV-ELTD05/Multiplicador/Counter/Counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Multiplicador/Counter|C:/Projects/RISCV-ELTD05/Multiplicador/Counter/Counter.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Multiplicador/Counter
+R6
+n@counter
+vMultiplicador
+R1
+!i10b 1
+!s100 ?eXOFQ>cG@]Q14k9W?eBn0
+I1X52;jlz@9hYD9PQC2nDo3
+R2
+R0
+w1750860039
+8C:/Projects/RISCV-ELTD05/Multiplicador/Multiplicador.v
+FC:/Projects/RISCV-ELTD05/Multiplicador/Multiplicador.v
+L0 7
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Projects/RISCV-ELTD05/Multiplicador/Multiplicador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Multiplicador|C:/Projects/RISCV-ELTD05/Multiplicador/Multiplicador.v|
+!i113 1
+R5
+Z9 !s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Multiplicador
+R6
+n@multiplicador
+vMultiplicador_TB
+R1
+!i10b 1
+!s100 ?G<XDY3C0mhk1dV_U@zKh2
+IY`<I6iWYE3zznIl9BU@iK2
+R2
+R0
+w1750859638
+8C:/Projects/RISCV-ELTD05/Multiplicador/Multiplicador_TB.v
+FC:/Projects/RISCV-ELTD05/Multiplicador/Multiplicador_TB.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Projects/RISCV-ELTD05/Multiplicador/Multiplicador_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Multiplicador|C:/Projects/RISCV-ELTD05/Multiplicador/Multiplicador_TB.v|
+!i113 1
+R5
+R9
+R6
+n@multiplicador_@t@b
