@@ -1,0 +1,69 @@
+`timescale 1ns/1ps
+
+module datamemory_tb;
+
+  // Entradas
+  reg clk;
+  reg [9:0] address;
+  reg [31:0] data;
+  reg wren;
+
+  // Saída
+  wire [31:0] q;
+
+  // Instancia o módulo a ser testado
+  datamemory uut (
+    .address(address),
+    .clock(clk),
+    .data(data),
+    .wren(wren),
+    .q(q)
+  );
+
+  // Gera clock de 10ns (100 MHz)
+  always #5 clk = ~clk;
+
+  initial begin
+    // Inicialização
+    clk = 0;
+    address = 0;
+    data = 0;
+    wren = 0;
+
+    // Aguarda propagação inicial
+    #10;
+
+    // Teste 1: Escreve valor na posição 10
+    address = 10;
+    data = 32'hDEADBEEF;
+    wren = 1;
+    #10;
+
+    // Teste 2: Escreve valor na posição 20
+    address = 20;
+    data = 32'hCAFEBABE;
+    #10;
+
+    // Desativa escrita
+    wren = 0;
+
+    // Teste 3: Lê posição 10
+    address = 10;
+    #10;
+    $display("Leitura da posição 10: %h (esperado: DEADBEEF)", q);
+
+    // Teste 4: Lê posição 20
+    address = 20;
+    #10;
+    $display("Leitura da posição 20: %h (esperado: CAFEBABE)", q);
+
+    // Teste 5: Lê posição não escrita (ex: 0)
+    address = 0;
+    #10;
+    $display("Leitura da posição 0 (esperado: do Data.hex): %h", q);
+
+    // Fim
+    $stop;
+  end
+
+endmodule
