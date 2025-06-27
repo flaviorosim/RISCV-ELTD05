@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Thu Jun 26 20:48:41 2025
-Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-Revision Name : CONTROL
-Top-level Entity Name : CONTROL
+Analysis & Synthesis Status : Successful - Thu Jun 26 22:35:54 2025
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : control
+Top-level Entity Name : control
 Family : Cyclone IV GX
 Total logic elements : 25
     Total combinational functions : 25

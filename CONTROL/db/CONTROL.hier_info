@@ -1,4 +1,4 @@
-|CONTROL
+|control
 in[0] => Decoder0.IN5
 in[1] => Decoder0.IN4
 in[2] => Decoder0.IN3

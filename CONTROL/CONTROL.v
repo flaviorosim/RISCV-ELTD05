@@ -1,4 +1,4 @@
-module CONTROL (
+module control (
     input [31:0] in,
     output [24:0] out
 );
