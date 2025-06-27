@@ -132,6 +132,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "zeroFlag",
+					"strict" : false
+				},
+				{
 					"name" : "sel[1]",
 					"strict" : false
 				},

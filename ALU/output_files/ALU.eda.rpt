@@ -1,6 +1,6 @@
-EDA Netlist Writer report for ALU
-Wed Jun 25 14:31:02 2025
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+EDA Netlist Writer report for alu
+Thu Jun 26 22:51:12 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -17,9 +17,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -29,18 +29,17 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Jun 25 14:31:02 2025 ;
-; Revision Name             ; ALU                                   ;
-; Top-level Entity Name     ; ALU                                   ;
-; Family                    ; Cyclone IV E                          ;
+; EDA Netlist Writer Status ; Successful - Thu Jun 26 22:51:12 2025 ;
+; Revision Name             ; alu                                   ;
+; Top-level Entity Name     ; alu                                   ;
+; Family                    ; Cyclone IV GX                         ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
 
@@ -51,7 +50,8 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                                            ; Setting                   ;
 +---------------------------------------------------------------------------------------------------+---------------------------+
 ; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
-; Generate functional simulation netlist                                                            ; On                        ;
+; Generate functional simulation netlist                                                            ; Off                       ;
+; Time scale                                                                                        ; 1 ps                      ;
 ; Truncate long hierarchy paths                                                                     ; Off                       ;
 ; Map illegal HDL characters                                                                        ; Off                       ;
 ; Flatten buses into individual nodes                                                               ; Off                       ;
@@ -66,13 +66,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+--------------------------------------------+
-; Simulation Generated Files                 ;
-+--------------------------------------------+
-; Generated Files                            ;
-+--------------------------------------------+
-; /home/aluno/ALU/simulation/modelsim/ALU.vo ;
-+--------------------------------------------+
++---------------------------------------------------------------------------------+
+; Simulation Generated Files                                                      ;
++---------------------------------------------------------------------------------+
+; Generated Files                                                                 ;
++---------------------------------------------------------------------------------+
+; C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/alu_7_1200mv_100c_slow.vo      ;
+; C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/alu_7_1200mv_-40c_slow.vo      ;
+; C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/alu_min_1200mv_-40c_fast.vo    ;
+; C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/alu.vo                         ;
+; C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/alu_7_1200mv_100c_v_slow.sdo   ;
+; C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/alu_7_1200mv_-40c_v_slow.sdo   ;
+; C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/alu_min_1200mv_-40c_v_fast.sdo ;
+; C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/alu_v.sdo                      ;
++---------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -80,15 +87,22 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Jun 25 14:31:01 2025
-Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off ALU -c ALU
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Jun 26 22:51:10 2025
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off alu -c alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file ALU.vo in folder "/home/aluno/ALU/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_7_1200mv_100c_slow.vo in folder "C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_7_1200mv_-40c_slow.vo in folder "C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_min_1200mv_-40c_fast.vo in folder "C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu.vo in folder "C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_7_1200mv_100c_v_slow.sdo in folder "C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_7_1200mv_-40c_v_slow.sdo in folder "C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_min_1200mv_-40c_v_fast.sdo in folder "C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file alu_v.sdo in folder "C:/Projects/RISCV-ELTD05/ALU/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 596 megabytes
-    Info: Processing ended: Wed Jun 25 14:31:02 2025
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Peak virtual memory: 4727 megabytes
+    Info: Processing ended: Thu Jun 26 22:51:12 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
