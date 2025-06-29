@@ -54,8 +54,8 @@ module cpu(
 	
 	assign ADDR = dataOut_Ex;
 	assign WE = ctrl1[3];
-	assign ADDR_Prog = dataOut_PC - 32'h9F0; // porque???
-	assign iAddress = dataOut_Ex - 32'h6F0;
+	assign ADDR_Prog = dataOut_PC - 32'h240; 
+	assign iAddress = dataOut_Ex - 32'h24A;
 	assign Data_BUS_WRITE = fioB;
 
 //Instruction Fetch
@@ -90,6 +90,7 @@ module cpu(
 
 
 	
+	 
 	 ADDRDecoding_Prog addrDecoding_Prog(
 		.addr(dataOut_PC),
 		.iAddressInst(iAddressInst), // verifica
