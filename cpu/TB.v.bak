@@ -1,0 +1,61 @@
+`timescale 1ns / 1ps
+
+module TB;
+
+    // Clock e Reset
+    reg CLK;
+    reg Reset;
+
+    // Barras de dados externas — ignoradas internamente
+    reg [31:0] Data_BUS_READ;
+    reg [31:0] Prog_BUS_READ;
+
+    // Sinais de saída do DUT
+    wire [31:0] ADDR;
+    wire [31:0] Data_BUS_WRITE;
+    wire [31:0] ADDR_Prog;
+    wire CS, WE, CS_P;
+
+    // Instância da CPU
+    cpu dut (
+        .CLK(CLK),
+        .Reset(Reset),
+        .Data_BUS_READ(Data_BUS_READ),
+        .Prog_BUS_READ(Prog_BUS_READ),
+        .ADDR(ADDR),
+        .Data_BUS_WRITE(Data_BUS_WRITE),
+        .ADDR_Prog(ADDR_Prog),
+        .CS(CS),
+        .WE(WE),
+        .CS_P(CS_P)
+    );
+
+    // Inicialização dos sinais e simulação
+    initial begin
+        // Debugar no SignalTap (ativado no hardware real)
+        $init_signal_spy("dut/CLK_SYS", "CLK_SYS", 1);
+        $init_signal_spy("dut/CLK_MUL", "CLK_MUL", 1);
+        $init_signal_spy("dut/writeBack", "writeBack", 1);
+        $init_signal_spy("dut/dataOut_PC", "dataOut_PC", 1);
+        $init_signal_spy("dut/ADDR", "ADDR", 1);
+        $init_signal_spy("dut/Data_BUS_WRITE", "Data_BUS_WRITE", 1);
+        $init_signal_spy("dut/WE", "WE", 1);
+        $init_signal_spy("dut/CS", "CS", 1);
+
+        // Inicialização geral
+        CLK = 0;
+        Reset = 1;            // Começa com reset ativo
+        Data_BUS_READ = 32'd0;
+        Prog_BUS_READ = 32'd0;
+
+        // Aguarda alguns ciclos com reset ativado
+        #10 Reset = 0;        // Desativa reset
+
+        // Tempo para o programa ser executado (ajustável)
+        #200000 $stop;
+    end
+
+    // Clock de 100 MHz (10 ns período)
+    always #5 CLK = ~CLK;
+
+endmodule

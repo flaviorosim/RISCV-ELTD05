@@ -1,0 +1,40 @@
+`timescale 1ns / 1ps
+
+module InstMem_TB;
+
+  // Entradas e saída
+  reg [9:0] address;
+  reg clock;
+  wire [31:0] q;
+
+  // Instância da memória de instruções
+  InstMem dut (
+    .address(address),
+    .clock(clock),
+    .q(q)
+  );
+
+  // Clock: 50 MHz (20 ns período)
+  always #10 clock = ~clock;
+
+  initial begin
+    clock = 0;
+    address = 0;
+
+    $display("=== Teste da InstMem ===");
+    $display("Tempo(ns)\tEndereço\tInstrucao (hex)");
+
+    #15; // aguarda meio ciclo para alinhar leitura
+
+    // Lê os primeiros 16 endereços da memória
+    repeat (16) begin
+      @(posedge clock);
+      $display("%8t\t%4d\t\t%h", $time, address, q);
+      address = address + 1;
+    end
+
+    $display("=== Fim da simulação ===");
+    $stop;
+  end
+
+endmodule
