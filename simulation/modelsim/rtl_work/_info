@@ -1,0 +1,462 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Projects/RISCV-ELTD05/simulation/modelsim
+vACC
+Z1 !s110 1751314897
+!i10b 1
+!s100 DJMB@8F_8iKDbj=H>@m1O0
+I8^M;D>Kd6SNQMz]DWja`U3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1751314012
+8C:/Projects/RISCV-ELTD05/Multiplicador/ACC/ACC.v
+FC:/Projects/RISCV-ELTD05/Multiplicador/ACC/ACC.v
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1751314897.000000
+!s107 C:/Projects/RISCV-ELTD05/Multiplicador/ACC/ACC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Multiplicador/ACC|C:/Projects/RISCV-ELTD05/Multiplicador/ACC/ACC.v|
+!i113 1
+Z6 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Multiplicador/ACC
+Z7 tCvgOpt 0
+n@a@c@c
+vAdder
+R1
+!i10b 1
+!s100 LnI0Yk4[Z;];E]@FWAzD51
+IjCK;GVkLh:hUgkJT`nbc91
+R2
+R0
+R3
+8C:/Projects/RISCV-ELTD05/Multiplicador/Adder/Adder.v
+FC:/Projects/RISCV-ELTD05/Multiplicador/Adder/Adder.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Projects/RISCV-ELTD05/Multiplicador/Adder/Adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Multiplicador/Adder|C:/Projects/RISCV-ELTD05/Multiplicador/Adder/Adder.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Multiplicador/Adder
+R7
+n@adder
+vADDRDecoding
+Z8 !s110 1751314898
+!i10b 1
+!s100 hO]JJ<5JNSc8;C>B[82S=3
+IUG3EmVKfc;elg_hj7zdcO0
+R2
+R0
+Z9 w1751314010
+8C:/Projects/RISCV-ELTD05/ADDRDecoding/ADDRDecoding.v
+FC:/Projects/RISCV-ELTD05/ADDRDecoding/ADDRDecoding.v
+L0 1
+R4
+r1
+!s85 0
+31
+Z10 !s108 1751314898.000000
+!s107 C:/Projects/RISCV-ELTD05/ADDRDecoding/ADDRDecoding.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/ADDRDecoding|C:/Projects/RISCV-ELTD05/ADDRDecoding/ADDRDecoding.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/ADDRDecoding
+R7
+n@a@d@d@r@decoding
+vADDRDecoding_Prog
+R8
+!i10b 1
+!s100 _A2^H]J6j3Y>jA0<c14f90
+IoGEef;AD7BHkomFAZAWY62
+R2
+R0
+R9
+8C:/Projects/RISCV-ELTD05/ADDRDecoding_Prog/ADDRDecoding_Prog.v
+FC:/Projects/RISCV-ELTD05/ADDRDecoding_Prog/ADDRDecoding_Prog.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Projects/RISCV-ELTD05/ADDRDecoding_Prog/ADDRDecoding_Prog.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/ADDRDecoding_Prog|C:/Projects/RISCV-ELTD05/ADDRDecoding_Prog/ADDRDecoding_Prog.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/ADDRDecoding_Prog
+R7
+n@a@d@d@r@decoding_@prog
+valu
+R8
+!i10b 1
+!s100 V`M^I8f7kkP1V1PkeJNKn0
+Iz6n[cL`lcR_H^T89XGH@a3
+R2
+R0
+Z11 w1751314011
+8C:/Projects/RISCV-ELTD05/ALU/alu.v
+FC:/Projects/RISCV-ELTD05/ALU/alu.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Projects/RISCV-ELTD05/ALU/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/ALU|C:/Projects/RISCV-ELTD05/ALU/alu.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/ALU
+R7
+vcontrol
+R8
+!i10b 1
+!s100 Wi?CSd^7LDYDFGWn?zd<h0
+IY95]e3M=n8g@P<;Z]V0j43
+R2
+R0
+R11
+8C:/Projects/RISCV-ELTD05/Control/control.v
+FC:/Projects/RISCV-ELTD05/Control/control.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Projects/RISCV-ELTD05/Control/control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Control|C:/Projects/RISCV-ELTD05/Control/control.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Control
+R7
+vCONTROL
+R1
+!i10b 1
+!s100 gAjHLhmz2<?<X?J9Tc8K_0
+If?keS<8=0?3b;@1bI2I`a2
+R2
+R0
+R3
+8C:/Projects/RISCV-ELTD05/Multiplicador/CONTROL/CONTROL.v
+FC:/Projects/RISCV-ELTD05/Multiplicador/CONTROL/CONTROL.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Projects/RISCV-ELTD05/Multiplicador/CONTROL/CONTROL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Multiplicador/CONTROL|C:/Projects/RISCV-ELTD05/Multiplicador/CONTROL/CONTROL.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Multiplicador/CONTROL
+R7
+n@c@o@n@t@r@o@l
+vCounter
+R1
+!i10b 1
+!s100 Fc`60OT86TfhJcQeDXP<U2
+I;1JZUMRIL;256@Xl=mTk;3
+R2
+R0
+R3
+8C:/Projects/RISCV-ELTD05/Multiplicador/Counter/Counter.v
+FC:/Projects/RISCV-ELTD05/Multiplicador/Counter/Counter.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Projects/RISCV-ELTD05/Multiplicador/Counter/Counter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Multiplicador/Counter|C:/Projects/RISCV-ELTD05/Multiplicador/Counter/Counter.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Multiplicador/Counter
+R7
+n@counter
+vcpu
+R8
+!i10b 1
+!s100 6f18N`_<W?>mF`AW@>gl]0
+IjEFeRh2]JcH5iI2cofofP3
+R2
+R0
+R3
+8C:/Projects/RISCV-ELTD05/cpu.v
+FC:/Projects/RISCV-ELTD05/cpu.v
+L0 18
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Projects/RISCV-ELTD05/cpu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05|C:/Projects/RISCV-ELTD05/cpu.v|
+!i113 1
+R6
+Z12 !s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05
+R7
+vdatamemory
+R8
+!i10b 1
+!s100 KjdcTYh8LKg5`ig`ZLfNJ3
+IB6HOGPYNL9PLA<Gi5:N:R3
+R2
+R0
+R11
+8C:/Projects/RISCV-ELTD05/DataMemory/datamemory.v
+FC:/Projects/RISCV-ELTD05/DataMemory/datamemory.v
+Z13 L0 39
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Projects/RISCV-ELTD05/DataMemory/datamemory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/DataMemory|C:/Projects/RISCV-ELTD05/DataMemory/datamemory.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/DataMemory
+R7
+vextend
+R8
+!i10b 1
+!s100 2gZIj:5cY4;WIZ@TZMLzC0
+IDGNa5;36ALkoMUY5=VVB>3
+R2
+R0
+R11
+8C:/Projects/RISCV-ELTD05/Extend/extend.v
+FC:/Projects/RISCV-ELTD05/Extend/extend.v
+L0 1
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Projects/RISCV-ELTD05/Extend/extend.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Extend|C:/Projects/RISCV-ELTD05/Extend/extend.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Extend
+R7
+vInstMem
+R8
+!i10b 1
+!s100 bJl:3TefA5>=SUEa[4L]k1
+I?Ei=T6746ngn8KJXeTPdG2
+R2
+R0
+R3
+8C:/Projects/RISCV-ELTD05/InstMem/InstMem.v
+FC:/Projects/RISCV-ELTD05/InstMem/InstMem.v
+R13
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Projects/RISCV-ELTD05/InstMem/InstMem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/InstMem|C:/Projects/RISCV-ELTD05/InstMem/InstMem.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/InstMem
+R7
+n@inst@mem
+vMultiplicador
+R8
+!i10b 1
+!s100 mNX9`:2g75IUKF7VSTCeg3
+I@Y2QKfm;8f=A4^H;U`;b72
+R2
+R0
+R3
+8C:/Projects/RISCV-ELTD05/Multiplicador/Multiplicador.v
+FC:/Projects/RISCV-ELTD05/Multiplicador/Multiplicador.v
+L0 6
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Projects/RISCV-ELTD05/Multiplicador/Multiplicador.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Multiplicador|C:/Projects/RISCV-ELTD05/Multiplicador/Multiplicador.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Multiplicador
+R7
+n@multiplicador
+vmux
+R1
+!i10b 1
+!s100 c2B;9CS4e1@@2DTX]a`]92
+IWL^7Z7oo=f1Z?@=3;a`jS0
+R2
+R0
+R3
+8C:/Projects/RISCV-ELTD05/MUX/mux.v
+FC:/Projects/RISCV-ELTD05/MUX/mux.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Projects/RISCV-ELTD05/MUX/mux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/MUX|C:/Projects/RISCV-ELTD05/MUX/mux.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/MUX
+R7
+vPC
+R1
+!i10b 1
+!s100 hmaodU3H[41ij:85=BLkU2
+IV5:Dic3DENmk9ZQ9L;cY`0
+R2
+R0
+R3
+8C:/Projects/RISCV-ELTD05/PC/PC.v
+FC:/Projects/RISCV-ELTD05/PC/PC.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Projects/RISCV-ELTD05/PC/PC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/PC|C:/Projects/RISCV-ELTD05/PC/PC.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/PC
+R7
+n@p@c
+vPLL
+R1
+!i10b 1
+!s100 R<[o6S7EY3<BK1dkB43?f1
+ITNOLSg2kf6ccNNP140iNj2
+R2
+R0
+R3
+8C:/Projects/RISCV-ELTD05/PLL/PLL.v
+FC:/Projects/RISCV-ELTD05/PLL/PLL.v
+R13
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Projects/RISCV-ELTD05/PLL/PLL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/PLL|C:/Projects/RISCV-ELTD05/PLL/PLL.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/PLL
+R7
+n@p@l@l
+vPLL_altpll
+R8
+!i10b 1
+!s100 mhmGinj51`oKLL:2TY7_70
+I6CzAOXiNmSmQ4CgCC62ZV3
+R2
+R0
+w1751314378
+8C:/Projects/RISCV-ELTD05/db/pll_altpll.v
+FC:/Projects/RISCV-ELTD05/db/pll_altpll.v
+L0 29
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Projects/RISCV-ELTD05/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/db|C:/Projects/RISCV-ELTD05/db/pll_altpll.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/db
+R7
+n@p@l@l_altpll
+vregister
+R1
+!i10b 1
+!s100 XO6h8aOGF@;z]eW:dB?ao1
+IoFV`j`?=fd;Q4:GFeQATM0
+R2
+R0
+R3
+8C:/Projects/RISCV-ELTD05/Register/register.v
+FC:/Projects/RISCV-ELTD05/Register/register.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Projects/RISCV-ELTD05/Register/register.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/Register|C:/Projects/RISCV-ELTD05/Register/register.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/Register
+R7
+vregisterfile
+R1
+!i10b 1
+!s100 YJdES;XE`_@RBVzdgDRD_0
+IBi7S@[W5kiTzVN`;`W4kg1
+R2
+R0
+R3
+8C:/Projects/RISCV-ELTD05/RegisterFile/registerfile.v
+FC:/Projects/RISCV-ELTD05/RegisterFile/registerfile.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Projects/RISCV-ELTD05/RegisterFile/registerfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05/RegisterFile|C:/Projects/RISCV-ELTD05/RegisterFile/registerfile.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05/RegisterFile
+R7
+vTB
+!s110 1751314899
+!i10b 1
+!s100 S`kVRBQZ;nDPcBh1`IZ@n3
+InD3k7CkL[`FAYPKIBTfbz3
+R2
+R0
+w1751314880
+8C:/Projects/RISCV-ELTD05/TB.v
+FC:/Projects/RISCV-ELTD05/TB.v
+L0 3
+R4
+r1
+!s85 0
+31
+!s108 1751314899.000000
+!s107 C:/Projects/RISCV-ELTD05/TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05|C:/Projects/RISCV-ELTD05/TB.v|
+!i113 1
+R6
+R12
+R7
+n@t@b

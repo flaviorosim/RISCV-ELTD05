@@ -19,16 +19,8 @@ module cpu(
     input CLK, Reset,
     input [31:0] Data_BUS_READ, Prog_BUS_READ,
     output [31:0] ADDR, Data_BUS_WRITE, ADDR_Prog,
-    output CS, WE, CS_P,
-
-    // Debug (sinais auxiliares para monitoria/simulation/SignalTap)
-    output [31:0] debug_PC,
-    output [31:0] debug_WRITE_DATA,
-    output [31:0] debug_WRITE_ADDR,
-    output debug_WE,
-    output debug_CS
+    output CS, WE, CS_P
 );
-
 
     (*keep=1*)wire [31:0] addressCorrection_mem1,sla_mem2, dataOut_Imm;
     (*keep=1*)wire [31:0] dataOut_RF1, dataOut_RF2;
@@ -234,12 +226,6 @@ module cpu(
 		.out(writeBack)
 	);
 	
-	
-	assign debug_PC         = dataOut_PC;
-	assign debug_WRITE_DATA = Data_BUS_WRITE;
-	assign debug_WRITE_ADDR = ADDR;
-	assign debug_WE         = WE;
-	assign debug_CS         = CS;
 
 
  endmodule 

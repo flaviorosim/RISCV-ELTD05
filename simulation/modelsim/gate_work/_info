@@ -1,0 +1,55 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Projects/RISCV-ELTD05/simulation/modelsim
+vcpu
+Z1 !s110 1751316065
+!i10b 1
+!s100 9;n2c>=_RWl<a;UV:F@OY2
+IT>W_5XHPk8_TXfROI;kNA0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1751316041
+8cpu_7_1200mv_100c_slow.vo
+Fcpu_7_1200mv_100c_slow.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1751316064.000000
+!s107 cpu_7_1200mv_100c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|cpu_7_1200mv_100c_slow.vo|
+!i113 1
+Z4 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+Z5 tCvgOpt 0
+vTB
+R1
+!i10b 1
+!s100 Wbmgfhd[=F`bkV0=lUdko2
+IgC]NakmfMS:5X6eA9z9Qm0
+R2
+R0
+w1751315957
+8C:/Projects/RISCV-ELTD05/TB.v
+FC:/Projects/RISCV-ELTD05/TB.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1751316065.000000
+!s107 C:/Projects/RISCV-ELTD05/TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Projects/RISCV-ELTD05|C:/Projects/RISCV-ELTD05/TB.v|
+!i113 1
+R4
+!s92 -vlog01compat -work work +incdir+C:/Projects/RISCV-ELTD05
+R5
+n@t@b
