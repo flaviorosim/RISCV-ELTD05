@@ -1,0 +1,286 @@
+Analysis & Synthesis report for cpu
+Sun Jun 29 20:08:19 2025
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Sun Jun 29 20:08:19 2025           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; cpu                                         ;
+; Top-level Entity Name              ; cpu                                         ;
+; Family                             ; Cyclone IV GX                               ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total GXB Receiver Channel PCS     ; N/A until Partition Merge                   ;
+; Total GXB Receiver Channel PMA     ; N/A until Partition Merge                   ;
+; Total GXB Transmitter Channel PCS  ; N/A until Partition Merge                   ;
+; Total GXB Transmitter Channel PMA  ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CGX150DF31I7AD  ;                    ;
+; Top-level entity name                                            ; cpu                ; cpu                ;
+; Family name                                                      ; Cyclone IV GX      ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun Jun 29 20:07:58 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu -c cpu
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file cpu.v
+    Info (12023): Found entity 1: cpu File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file tb.v
+    Info (12023): Found entity 1: TB File: C:/Projects/RISCV-ELTD05/cpu/TB.v Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(127): created implicit net for "en" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 127
+Info (12127): Elaborating entity "cpu" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at cpu.v(62): truncated value with size 32 to match size of target (10) File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 62
+Warning (12125): Using design file instmem.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: InstMem File: C:/Projects/RISCV-ELTD05/cpu/instmem.v Line: 39
+Info (12128): Elaborating entity "InstMem" for hierarchy "InstMem:IM" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 71
+Info (12128): Elaborating entity "altsyncram" for hierarchy "InstMem:IM|altsyncram:altsyncram_component" File: C:/Projects/RISCV-ELTD05/cpu/instmem.v Line: 81
+Info (12130): Elaborated megafunction instantiation "InstMem:IM|altsyncram:altsyncram_component" File: C:/Projects/RISCV-ELTD05/cpu/instmem.v Line: 81
+Info (12133): Instantiated megafunction "InstMem:IM|altsyncram:altsyncram_component" with the following parameter: File: C:/Projects/RISCV-ELTD05/cpu/instmem.v Line: 81
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "Code.hex"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV GX"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jv91.tdf
+    Info (12023): Found entity 1: altsyncram_jv91 File: C:/Projects/RISCV-ELTD05/cpu/db/altsyncram_jv91.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_jv91" for hierarchy "InstMem:IM|altsyncram:altsyncram_component|altsyncram_jv91:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (12125): Using design file pc.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: PC File: C:/Projects/RISCV-ELTD05/cpu/pc.v Line: 1
+Info (12128): Elaborating entity "PC" for hierarchy "PC:pc" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 83
+Warning (12090): Entity "mux" obtained from "mux.v" instead of from Quartus Prime megafunction library File: C:/Projects/RISCV-ELTD05/cpu/mux.v Line: 1
+Warning (12125): Using design file mux.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: mux File: C:/Projects/RISCV-ELTD05/cpu/mux.v Line: 1
+Info (12128): Elaborating entity "mux" for hierarchy "mux:MuxProgMem" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 93
+Warning (12125): Using design file addrdecoding_prog.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ADDRDecoding_Prog File: C:/Projects/RISCV-ELTD05/cpu/addrdecoding_prog.v Line: 1
+Info (12128): Elaborating entity "ADDRDecoding_Prog" for hierarchy "ADDRDecoding_Prog:addrDecoding_Prog" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 102
+Warning (12125): Using design file registerfile.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: registerfile File: C:/Projects/RISCV-ELTD05/cpu/registerfile.v Line: 1
+Info (12128): Elaborating entity "registerfile" for hierarchy "registerfile:RegisterFile" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 117
+Warning (12125): Using design file control.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: control File: C:/Projects/RISCV-ELTD05/cpu/control.v Line: 1
+Info (12128): Elaborating entity "control" for hierarchy "control:Control" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 124
+Warning (10270): Verilog HDL Case Statement warning at control.v(108): incomplete case statement has no default case item File: C:/Projects/RISCV-ELTD05/cpu/control.v Line: 108
+Warning (10270): Verilog HDL Case Statement warning at control.v(46): incomplete case statement has no default case item File: C:/Projects/RISCV-ELTD05/cpu/control.v Line: 46
+Warning (12125): Using design file extend.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: extend File: C:/Projects/RISCV-ELTD05/cpu/extend.v Line: 1
+Info (12128): Elaborating entity "extend" for hierarchy "extend:Extend" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 130
+Warning (12125): Using design file register.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: register File: C:/Projects/RISCV-ELTD05/cpu/register.v Line: 1
+Info (12128): Elaborating entity "register" for hierarchy "register:IMM" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 137
+Warning (12125): Using design file multiplicador.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Multiplicador File: C:/Projects/RISCV-ELTD05/cpu/multiplicador.v Line: 6
+Info (12128): Elaborating entity "Multiplicador" for hierarchy "Multiplicador:multiplicador" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 157
+Warning (12125): Using design file acc.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ACC File: C:/Projects/RISCV-ELTD05/cpu/acc.v Line: 1
+Info (12128): Elaborating entity "ACC" for hierarchy "Multiplicador:multiplicador|ACC:acc" File: C:/Projects/RISCV-ELTD05/cpu/multiplicador.v Line: 35
+Warning (12125): Using design file counter.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Counter File: C:/Projects/RISCV-ELTD05/cpu/counter.v Line: 1
+Info (12128): Elaborating entity "Counter" for hierarchy "Multiplicador:multiplicador|Counter:counter" File: C:/Projects/RISCV-ELTD05/cpu/multiplicador.v Line: 43
+Warning (10230): Verilog HDL assignment warning at counter.v(16): truncated value with size 32 to match size of target (5) File: C:/Projects/RISCV-ELTD05/cpu/counter.v Line: 16
+Warning (12125): Using design file adder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Adder File: C:/Projects/RISCV-ELTD05/cpu/adder.v Line: 1
+Info (12128): Elaborating entity "Adder" for hierarchy "Multiplicador:multiplicador|Adder:adder" File: C:/Projects/RISCV-ELTD05/cpu/multiplicador.v Line: 64
+Warning (12125): Using design file alu.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: alu File: C:/Projects/RISCV-ELTD05/cpu/alu.v Line: 1
+Info (12128): Elaborating entity "alu" for hierarchy "alu:ALU" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 175
+Warning (10230): Verilog HDL assignment warning at alu.v(7): truncated value with size 32 to match size of target (1) File: C:/Projects/RISCV-ELTD05/cpu/alu.v Line: 7
+Warning (12125): Using design file addrdecoding.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ADDRDecoding File: C:/Projects/RISCV-ELTD05/cpu/addrdecoding.v Line: 1
+Info (12128): Elaborating entity "ADDRDecoding" for hierarchy "ADDRDecoding:AddrDecoding" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 193
+Warning (12125): Using design file datamemory.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: datamemory File: C:/Projects/RISCV-ELTD05/cpu/datamemory.v Line: 39
+Info (12128): Elaborating entity "datamemory" for hierarchy "datamemory:Data_Memory" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 202
+Info (12128): Elaborating entity "altsyncram" for hierarchy "datamemory:Data_Memory|altsyncram:altsyncram_component" File: C:/Projects/RISCV-ELTD05/cpu/datamemory.v Line: 85
+Info (12130): Elaborated megafunction instantiation "datamemory:Data_Memory|altsyncram:altsyncram_component" File: C:/Projects/RISCV-ELTD05/cpu/datamemory.v Line: 85
+Info (12133): Instantiated megafunction "datamemory:Data_Memory|altsyncram:altsyncram_component" with the following parameter: File: C:/Projects/RISCV-ELTD05/cpu/datamemory.v Line: 85
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "Data.hex"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV GX"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_28i1.tdf
+    Info (12023): Found entity 1: altsyncram_28i1 File: C:/Projects/RISCV-ELTD05/cpu/db/altsyncram_28i1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_28i1" for hierarchy "datamemory:Data_Memory|altsyncram:altsyncram_component|altsyncram_28i1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "register" for hierarchy "register:CTRL2" File: C:/Projects/RISCV-ELTD05/cpu/cpu.v Line: 217
+Error (12006): Node instance "control" instantiates undefined entity "CONTROL". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Projects/RISCV-ELTD05/cpu/multiplicador.v Line: 56
+Info (144001): Generated suppressed messages file C:/Projects/RISCV-ELTD05/cpu/output_files/cpu.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 23 warnings
+    Error: Peak virtual memory: 4805 megabytes
+    Error: Processing ended: Sun Jun 29 20:08:19 2025
+    Error: Elapsed time: 00:00:21
+    Error: Total CPU time (on all processors): 00:00:36
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Projects/RISCV-ELTD05/cpu/output_files/cpu.map.smsg.
+
+

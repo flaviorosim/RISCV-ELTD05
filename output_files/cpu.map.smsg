@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at cpu.v(30): object "ctrl1" differs only in case from object "CTRL1" in the same scope File: C:/Projects/RISCV-ELTD05/cpu.v Line: 30
+Info (10281): Verilog HDL Declaration information at cpu.v(31): object "ctrl2" differs only in case from object "CTRL2" in the same scope File: C:/Projects/RISCV-ELTD05/cpu.v Line: 31
