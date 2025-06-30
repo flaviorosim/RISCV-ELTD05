@@ -41,7 +41,8 @@ module cpu(
     (*keep=1*)wire pc_jmpFlag;
     (*keep=1*)wire pc_branchFlag;
 	 (*keep=1*)wire CS_WB;
-	 	  
+	 (*keep=1*)wire [9:0] iAddress;
+	 (*keep=1*)wire [31:0] dataOut_Extend;
     assign CS_WB = ctrl2[25]; 
 
 	PLL pll (
@@ -118,7 +119,6 @@ module cpu(
 	);
 	 
 	extend Extend(
-		.en(en), // enable do control Tem que CRIAR
 		.in(progOut),
 		.out(dataOut_Extend)
 	);
@@ -130,7 +130,6 @@ module cpu(
 		.out(dataOut_Imm)
 	);
 	
-	wire [31:0] dataOut_Extend;
 
 	register CTRL1 (
 		.CLK(CLK_SYS),
@@ -177,7 +176,7 @@ module cpu(
 
 //Memory 
 	 wire iWE;
-	 wire [9:0] iAddress;
+	 
 	ADDRDecoding AddrDecoding (
 		.WE(ctrl1[3]),
 		.iWE(iWE),
