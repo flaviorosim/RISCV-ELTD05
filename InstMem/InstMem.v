@@ -128,7 +128,7 @@ endmodule
 // Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
 // Retrieval info: PRIVATE: RegAddr NUMERIC "1"
 // Retrieval info: PRIVATE: RegOutput NUMERIC "0"
-// Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
+// Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "1"
 // Retrieval info: PRIVATE: SingleClock NUMERIC "1"
 // Retrieval info: PRIVATE: UseDQRAM NUMERIC "0"
 // Retrieval info: PRIVATE: WidthAddr NUMERIC "10"
@@ -161,4 +161,5 @@ endmodule
 // Retrieval info: GEN_FILE: TYPE_NORMAL InstMem.bsf TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL InstMem_inst.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL InstMem_bb.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL InstMem_syn.v TRUE
 // Retrieval info: LIB_FILE: altera_mf

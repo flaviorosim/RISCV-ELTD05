@@ -1,66 +1,48 @@
-//Recomendações para gustavo e flavio do futuro:
-//O multiplicador precisa operar em clock separado (CLK_MUL) vindo da PLL.
-//Não misture CLK_MUL com CLK_SYS da MIPS.
-
-
-module Multiplicador (Multiplicando, Multiplicador, Produto, Idle, Done, Clk, Rst, St);
-
-	input [15:0] Multiplicando;
-	input [15:0] Multiplicador;
-	input Clk;
-	input St;
-	input Rst;
-	output Idle;
-	output Done;
-	output [31:0] Produto;
-
+module Multiplicador #(parameter N=16)(
+	input St, Clk, Rst,
+	input[N-1:0] Multiplicando, Multiplicador,
+	output Idle, Done,
+	output[2*N-1:0] Produto
+);
+	
 	wire Load, Sh, Ad, K, M;
-	wire [15:0] OperandoA;
-	wire [15:0] OperandoB;
-	wire [16:0] Soma;
-	wire [31:0] Produto;
-	wire [32:0] Saidas;
+	wire[N:0] Soma;
+	wire[N-1:0] operandoB;
+	wire[2*N:0] resultado;
+	assign M = resultado[0];
+	assign operandoB = resultado[2*N-1:N];
 	
+	CONTROL controle (
+							.Clk(Clk), 
+							.K(K), 
+							.St(St), 
+							.M(M),
+							.Idle(Idle), 
+							.Done(Done), 
+							.Load(Load), 
+							.Sh(Sh), 
+							.Ad(Ad),
+							.Rst(Rst));
+							
+	Counter #(.N(N)) Contador (
+							.Load(Load), 
+							.Clk(Clk), 
+							.Rst(Rst),
+							.K(K));
+	Adder #(.N(N)) somador (
+							.OperandoA(Multiplicando), 
+							.OperandoB(operandoB), 
+							.Soma(Soma));
+	ACC #(.N(N)) acumulador (
+							.Load(Load), 
+							.Sh(Sh), 
+							.Ad(Ad), 
+							.Clk(Clk), 
+							.Rst(Rst),
+							.Entradas({Soma,Multiplicador}), 
+							.Saidas(resultado));
+						
+	assign Produto = resultado[2*N-1:0];
 	
-	assign M = Saidas[0];
-	
-	ACC acc (
-		.Load(Load),
-		.Sh(Sh),
-		.Ad(Ad),
-		.Clk(Clk),
-		.Rst(Rst),
-		.Entradas({Soma, Multiplicador}),
-		.Saidas(Saidas)
-	);
 
-	assign Produto = Saidas[31:0];
-
-	Counter counter (
-		.Clk(Clk),
-		.Load(Load),
-		.K(K)
-	);
-
-
-	CONTROL control (
-		.St(St),
-		.Clk(Clk),
-		.M(M),
-		.K(K),
-		.Load(Load),
-		.Sh(Sh),
-		.Ad(Ad),
-		.Done(Done),
-		.Idle(Idle)
-	);
-
-	assign OperandoB = Saidas[31:16];
-
-	Adder adder (
-		.OperandoA(Multiplicando),
-		.OperandoB(OperandoB),
-		.Soma(Soma)
-	);
-
-endmodule
+endmodule 

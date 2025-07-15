@@ -1,20 +1,16 @@
-module ACC (
+module ACC #(parameter N=16)(
 	input Load, Sh, Ad, Clk, Rst,
-	input [32:0] Entradas,
-	output reg [32:0] Saidas
+	input [2*N:0] Entradas,
+	output reg [2*N:0] Saidas
 );
 
-always @(posedge Clk) begin
-	if (Rst)
-		Saidas <= 0;
-	else begin
-		if (Load)
-			Saidas <= {17'b0, Entradas[15:0]};
-		else if (Ad)
-			Saidas[32:16] <= Entradas[32:16];
-		else if (Sh)
-			Saidas <= Saidas >> 1;
-	end
-end
+	always @(posedge Clk or posedge Rst) begin
+		if (Rst) Saidas <= {2*N+1{1'b0}};
+		else begin
+			if (Load) Saidas <= {{N{1'b0}},Entradas[N-1:0]};
+			else if (Sh) Saidas <= Saidas >> 1;
+			else if	(Ad) Saidas <= {Entradas[2*N:N], Saidas[N-1:0]};		
+		end
+	end 
 
 endmodule

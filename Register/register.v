@@ -1,9 +1,9 @@
-module register #(parameter TAM=32)(
-	input [TAM-1:0] in,
-	input CLK, Reset, 
-	output reg [TAM-1:0] out
+module register #(parameter DATA_WIDTH=32)(
+	input [DATA_WIDTH-1:0] in,
+	input Clk, Reset, 
+	output reg [DATA_WIDTH-1:0] out
 );
-	always @(posedge CLK, posedge Reset)
+	always @(posedge Clk, posedge Reset)
 		if(Reset)
 			out <= 0;
 		else

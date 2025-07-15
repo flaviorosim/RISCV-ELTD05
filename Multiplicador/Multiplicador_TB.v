@@ -1,76 +1,122 @@
-`timescale 1ns/10ps
-
+`timescale 1ns/100ps
 module Multiplicador_TB;
+	
+	//parameter N = 16;
+	
+	reg St, Clk, Rst;
+	reg [15:0] Multiplicando, Multiplicador;
+	wire Idle, Done;
+	wire [31:0] Produto;
 
-    reg [15:0] Multiplicando;
-    reg [15:0] Multiplicador;
-    reg Clk, Rst, St;
+	Multiplicador DUT(
+		.St(St), 
+		.Clk(Clk), 
+		.Rst(Rst), 
+		.Multiplicando(Multiplicando), 
+		.Multiplicador(Multiplicador), 
+		.Idle(Idle), 
+		.Done(Done), 
+		.Produto(Produto)
+	);
+  
+	always #10 Clk = ~Clk;
 
-    wire [31:0] Produto;
-    wire Idle, Done;
-    
-    
-    Multiplicador DUT (
-        .Multiplicando(Multiplicando),
-        .Multiplicador(Multiplicador),
-        .Produto(Produto),
-        .Idle(Idle),
-        .Done(Done),
-        .Clk(Clk),
-        .Rst(Rst),
-        .St(St)
-    );
-    
-    
-    initial begin
-        Clk = 0;
-        forever #10 Clk = ~Clk;
-    end
-    
-    
-    initial begin
-        
-        Rst = 1;
-        St = 0;
-        Multiplicando = 0;
-        Multiplicador = 0;
-        
-        
-        #20;
-        Rst = 0;
-        
-        Multiplicando = 16'd5; //5
-        Multiplicador = 16'd3; //3
-		  //tem que dar 15 = 0000 1111
-        St = 1;
-        #20 St = 0;
-        
-        
-        wait(Done);
-        #20 Rst = 1;
-		  #15 Rst = 0;
-        
-        Multiplicando = 16'd10; //10
-        Multiplicador = 16'd4;  //4
-		  //tem que dar 40 = 0010 1000
-        #10 St = 1;
-        #20 St = 0;
-        
-        wait(Done);
-        #20;
+	initial begin
+		Clk = 0;
+		Rst = 0;
+		St = 0;
+		
+		// Caso de teste 1: Multiplicando = 15, Multiplicador = 15
+		Multiplicando = 3;
+		Multiplicador = 0;
 
-        Multiplicando = 16'd1000; //1000
-        Multiplicador = 16'd50; //50 
-		  //tem que dar 50.000 = 1100 0011 0101 0000
-        #10 St = 1;
-        #20 St = 0;
+		// Reset
+		#5 Rst = 1;
+		#10 Rst = 0;
+		
+		#20;
 
-        wait(Done);
-        #20;
-        
-    end
-	 
-	 initial 
-		#800 $stop;
-   
+		// Ativar o multiplicador
+		St = 1;
+		#20;
+		St = 0;
+
+		// Espera até que o sinal Done seja ativado, o que significa que a multiplicação terminou
+		wait (Done == 1);
+
+		#35;
+
+		// Caso de teste 2: Multiplicando = 7, Multiplicador = 3
+		Multiplicando = 7;
+		Multiplicador = 3;
+
+		// Iniciar nova multiplicação
+		St = 1;
+		#20;
+		St = 0;
+
+		// Espera novamente até que o sinal Done seja ativado, o que significa que a multiplicação terminou
+		wait (Done == 1);
+		
+		#35;
+
+		// Caso de teste 3: Multiplicando = 10, Multiplicador = 5
+		Multiplicando = 10;
+		Multiplicador = 5;
+
+		// Iniciar a multiplicação
+		St = 1;
+		#20;
+		St = 0;
+
+		// Esperar o Done
+		wait (Done == 1);
+		
+		#35;
+
+		// Caso de teste 4: Multiplicando = 0, Multiplicador = 0
+		Multiplicando = 0;
+		Multiplicador = 0;
+
+		// Iniciar nova multiplicação
+		St = 1;
+		#20;
+		St = 0;
+
+		// Espera novamente até que o sinal Done seja ativado, o que significa que a multiplicação terminou
+		wait (Done == 1);
+		
+		#35;
+
+		// Caso de teste 5: Multiplicando = 0, Multiplicador = 3
+		Multiplicando = 0;
+		Multiplicador = 3;
+
+		// Iniciar nova multiplicação
+		St = 1;
+		#20;
+		St = 0;
+
+		// Espera novamente até que o sinal Done seja ativado, o que significa que a multiplicação terminou
+		wait (Done == 1);
+		
+		#35;
+
+		// Caso de teste 6: Multiplicando = 15, Multiplicador = 15
+		Multiplicando = 65535;
+		Multiplicador = 65535;
+
+		// Iniciar nova multiplicação
+		St = 1;
+		#20;
+		St = 0;
+
+		// Espera novamente até que o sinal Done seja ativado, o que significa que a multiplicação terminou
+		wait (Done == 1);
+
+		// Finalizar simulação
+		#60;
+		$stop;
+	end
+
 endmodule

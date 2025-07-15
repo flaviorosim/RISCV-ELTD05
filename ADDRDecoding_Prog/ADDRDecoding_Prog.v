@@ -1,27 +1,24 @@
 module ADDRDecoding_Prog(
     input [31:0] addr,
-    output reg CS_P,
-	 output reg [31:0] iAddressInst
-
+    output reg CS_P
 );
 
-    localparam INF = 32'h240;
-    localparam SUP = 32'h123F; 
-	 
+    reg [31:0] sup;
+    reg [31:0] inf;
+
     initial begin
-        CS_P = 0; 
+        CS_P = 0;  
     end
 
     always @(*) begin
-        if (addr >= INF && addr <= SUP) begin
-            CS_P = 1;
-				iAddressInst = addr - INF; 
-		  end
-        else begin
-            CS_P = 0; 
-				iAddressInst = 0;
-		  end
+        sup = 32'h63F; 
+        inf = 32'h240;  
+
+        
+        if (addr >= inf && addr <= sup) 
+            CS_P = 1; 
+        else
+            CS_P = 0;  
     end
 
 endmodule
-	

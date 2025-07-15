@@ -1,30 +1,30 @@
 module ADDRDecoding(
     input [31:0] addr,
     input WE,
-    output reg CS, iWE,
+    output reg cs, iWE,
     output reg [31:0] iAddress
 );
-    localparam INF = 32'h24A;
-	 localparam SUP = 32'h1249;
+    reg [31:0] sup;
+    reg [31:0] inf;
 
 
- 
     initial begin
-        CS = 0;
+        sup = 32'h649; 
+        inf = 32'h24A; 
+        cs = 0;
         iWE = 0;
         iAddress = 0;
     end
 
     always @(*) begin
-        // Verifica se o endereço está no intervalo permitido
-        if (addr >= INF && addr <= SUP) begin
-            CS = 1;
-            iWE = WE; 
-            iAddress = addr - INF; 
+        if (addr >= inf && addr <= sup) begin
+            cs = 1;
+            iWE = WE;
+            iAddress = addr - inf;
         end else begin
-            CS = 0;
+            cs = 0;
             iWE = 0;
-            iAddress = 0; 
+            iAddress = 0;
         end
     end
 endmodule

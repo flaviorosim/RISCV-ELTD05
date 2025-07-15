@@ -1,61 +1,47 @@
-`timescale 1ns/1ps
+`timescale 1ns / 1ps
 
 module datamemory_TB;
 
-  reg clk;
-  reg [9:0] address;
-  reg [31:0] data;
-  reg wren;
+    // Definindo os sinais de entrada e saída
+    reg [9:0] address;   // Endereço de leitura (10 bits)
+    reg clock;            // Clock do sistema
+    reg [31:0] data;      // Dados de entrada (não usados para leitura)
+    reg wren;             // Sinal de escrita (0 para leitura)
+    wire [31:0] q;        // Dados lidos da memória
 
-  wire [31:0] q;
+    // Instanciando o módulo de memória
+    datamemory uut (
+        .address(address),
+        .clock(clock),
+        .data(data),
+        .wren(wren),
+        .q(q)
+    );
 
-  datamemory uut (
-    .address(address),
-    .clock(clk),
-    .data(data),
-    .wren(wren),
-    .q(q)
-  );
+    // Gerador de clock
+    always begin
+        #5 clock = ~clock;  // Clock de 100 MHz (5ns de período)
+    end
 
-  always #5 clk = ~clk;
+    // Processo de teste
+     initial begin
+        // Inicializando sinais
+        clock = 0;
+        address = 10'b0000000000;  // Endereço inicial para leitura
+        data = 32'b0;              // Dados de entrada (não utilizados na leitura)
+        wren = 0;                  // Desabilitar escrita, apenas leitura
 
-  initial begin
-    clk = 0;
-    address = 0;
-    data = 0;
-    wren = 0;
-
-    #10;
-
-    // Escreve valor na posição 10
-    address = 10;
-    data = 32'hDEADBEEF;
-    wren = 1;
-    #10;
-
-    // Escreve valor na posição 20
-    address = 20;
-    data = 32'hCAFEBABE;
-    #10;
-
-    wren = 0;
-
-    // Lê posição 10
-    address = 10;
-    #10;
-    $display("Leitura da posição 10: %h (esperado: DEADBEEF)", q);
-
-    // Lê posição 20
-    address = 20;
-    #10;
-    $display("Leitura da posição 20: %h (esperado: CAFEBABE)", q);
-
-    // Lê posição não escrita (ex: 0)
-    address = 0;
-    #10;
-    $display("Leitura da posição 0 (esperado: do Data.hex): %h", q);
-
-    $stop;
-  end
-
+        // Aguarde por alguns ciclos de clock
+        #20;
+        
+        // Testar e imprimir os valores das 32 primeiras posições (endereços 0 a 31)
+        for (address = 10'b0000000000; address <= 10'b0001111111; address = address + 1) begin
+            #20;  // Espera dois ciclos para leitura (ajuste o tempo conforme necessário)
+            // Imprimir os dados lidos
+            $display("Data at address %b: %h", address, q);
+        end
+        
+        // Finaliza o teste
+        $finish;
+    end
 endmodule

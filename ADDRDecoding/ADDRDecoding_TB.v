@@ -1,45 +1,34 @@
 `timescale 1ns/100ps
-
 module ADDRDecoding_TB;
     reg [31:0] addr;
-	 reg WE;
+    reg WE;
+    wire cs, iWE;
     wire [31:0] iAddress;
-    wire CS, iWE;
 
-    // Instancia o módulo
     ADDRDecoding uut (
         .addr(addr),
-        .CS(CS),
-		  .WE(WE),
-		  .iWE(iWE),
+        .WE(WE),
+        .cs(cs),
+        .iWE(iWE),
         .iAddress(iAddress)
     );
 
     initial begin
-	
-		  WE = 0;
-		  
-		  addr = 32'h205;
-		  #10;
-		  WE = 1;
-		  #10;
-		  
-		  WE = 0;
-        addr = 32'h24A;
-		  #10;
-		 
-		  WE = 1;
-		  #10;
+        addr = 0;
+        WE = 0;
 
-
-
+        #10 addr = 32'h041; WE = 1; #10;
 		  
-        addr = 32'h1249;
-		  #10;
-	
-		  addr = 32'h1EE2;
-		  #10;
+        #10 addr = 32'h24A; WE = 1; #10;
 		  
+        #10 addr = 32'h3A3; WE = 1; #10;
+		  
+		  
+        #10 addr = 32'h649; WE = 1; #10;
+
+        #10 addr = 32'h90F; WE = 1; #10;
+
+       
         $finish;
     end
 endmodule

@@ -1,22 +1,24 @@
 module registerfile (
-    input CLK, WE, rstControl,
+    input Clk, we, resetControl,
     input [4:0] rs, rt, rd,
     input [31:0] writeBack,
     output reg [31:0] A, B
 );    
     reg [31:0] register [31:0]; 
-    integer i;
+    integer j;
 
     initial begin
-        for (i = 0; i < 32; i = i + 1) 
-            register[i] <= 32'h0;
+        for (j = 0; j < 32; j = j + 1) 
+            register[j] <= 32'h0;
     end
 
-    always @(posedge CLK) begin
-        if (rstControl) begin
+    always @(posedge Clk) begin
+        
+        if (resetControl) begin
             A <= 32'h0;
             B <= 32'h0;
         end else begin
+            // Leitura
             if (rs == 0) 
                 A <= 32'h0; 
             else 
@@ -26,11 +28,9 @@ module registerfile (
                 B <= 32'h0; 
             else 
                 B <= register[rt];
-				if (WE && rd != 0) 
+				if (we && rd != 0) 
                 register[rd] <= writeBack; 
         end
     end
-	 
-	
 	 
 endmodule

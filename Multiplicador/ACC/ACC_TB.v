@@ -1,51 +1,64 @@
-`timescale 1ns/10ps
-module ACC_TB();
+`timescale 1ns/100ps
+module ACC_TB;
+	parameter N = 4;
 	reg Load, Sh, Ad, Clk, Rst;
-	reg [8:0] Entradas;
-	wire [8:0] Saidas;
+	reg[2*N:0] Entradas;
+	wire[2*N:0] Saidas;
 	
-	ACC  DUT(
-		.Load(Load),
-		.Sh(Sh),
-		.Ad(Ad),
+	ACC #(.N(N)) DUT(
+		.Load(Load), 
+		.Sh(Sh), 
+		.Ad(Ad), 
 		.Clk(Clk),
 		.Rst(Rst),
 		.Entradas(Entradas),
-		.Saidas(Saidas)
+		.Saidas(Saidas)	
 	);
 	
 	initial begin
 		Clk = 0;
-		forever #10 Clk = ~Clk;
+		Rst = 0;
+		Load = 0;
+		Sh = 0;
+		Ad = 0;
+		Entradas = 9'b0_1101_1011;  // Valores 13 e 11
 	end
+	
+	always #10 Clk = ~Clk;
 	
 	initial begin
-	Rst = 0;
-        Load = 0;
-        Sh = 0;
-        Ad = 0;
-        Entradas = 9'b0;
-        
-  
-        Rst = 1;
-        #20 Rst = 0;
-        
-        
-        Entradas = 9'b000001101; 
-        Load = 1;
-        #20 Load = 0;
-        
-        
-        Entradas = 9'b100110000; 
-        Ad = 1;
-        #20 Ad = 0;
-        
-        
-        Sh = 1;
-        #20 Sh = 0;
-		  #10;
+		// Teste 1: Reset
+		#2 Rst = 1;
+		#10 Rst = 0;
+		#5;
+		
+		// Teste 2: Load
+		#10 Load = 1;
+		#10 Load = 0;
+		#10;  
+		
+		// Teste 3: Shift (Sh) - Após Load
+		Sh = 1;
+		#10 Sh = 0;
+		#10;
+		
+		// Teste 4: Adiciona parte alta de Entradas (Ad) - Após o primeiro Shift
+		Ad = 1;
+		#10 Ad = 0;
+		#10;
+		
+		// Teste 5: Shift (Sh) - Após primeiro Ad
+		Sh = 1;
+		#10 Sh = 0;
+		#10;
+		
+		// Teste 4: Adiciona parte alta de Entradas (Ad) - Após o segundo Shift
+		Ad = 1;
+		#10 Ad = 0;
+		#10;
+		
+		#10;
+		$stop;
 	end
 	
-	initial 
-		#120 $stop;
 endmodule

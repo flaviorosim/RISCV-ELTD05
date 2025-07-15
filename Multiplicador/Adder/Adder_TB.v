@@ -1,31 +1,24 @@
-`timescale 1ns/10ps
+`timescale 1ns/100ps
+module Adder_TB;
 
-module Adder_TB();
-	reg [3:0] OperandoA, OperandoB;
-	wire [4:0] Soma;
-	
-	Adder DUT(
-       .OperandoA(OperandoA),
-       .OperandoB(OperandoB),
-       .Soma(Soma)
-   );
-	
+	parameter N = 4;
+	reg[N-1:0] OperandoA, OperandoB;
+	wire[N:0] Soma;
+
+	Adder #(.N(N)) DUT(
+							 .OperandoA(OperandoA),
+							 .OperandoB(OperandoB),
+							 .Soma(Soma)
+							);
+							
 	initial begin
-		OperandoA = 1;
-		OperandoB = 2;
-		
-		#10 
-		OperandoA = 2;
-		OperandoB = 2;
-		
-		#10 
-		OperandoA = 10;
-		OperandoB = 6;
-		
-		#10 
 		OperandoA = 15;
 		OperandoB = 15;
-		
-		#10;
+		#20;
+		OperandoA = 7;
+		OperandoB = 6;
+		#20;
+		$stop;
 	end
-endmodule
+
+endmodule 

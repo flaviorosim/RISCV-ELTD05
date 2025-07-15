@@ -2,35 +2,43 @@
 
 module InstMem_TB;
 
-  reg [9:0] address;
-  reg clock;
-  wire [31:0] q;
+  // Declaração dos sinais
+  reg [9:0] address;  // Endereço de entrada
+  reg clock;          // Clock de entrada
+  wire [31:0] q;      // Saída da memória
 
-  InstMem dut (
+  // Instância do módulo InstMem
+  InstMem uut (
     .address(address),
     .clock(clock),
     .q(q)
   );
 
-  always #10 clock = ~clock;
-
+  // Geração do clock
   initial begin
     clock = 0;
-    address = 0;
+    forever #10 clock = ~clock; // Período do clock = 20ns
+  end
 
-    $display("Começando teste kekeke");
-    $display("Tempo(ns)\tEndereço\tInstrucao (hex)");
+  // Estímulos para o módulo
+  initial begin
+    // Inicializa sinais
+    address = 10'b0000000000; // Iniciar a leitura no endereço 4
 
-    #15; // aguarda meio ciclo para alinhar leitura
+    // Monitorar valores
+    $monitor("Time: %0t | Address: %0d | Data: %h", $time, address, q);
 
-    // Lê os primeiros 16 endereços da memória
-    repeat (16) begin
-      @(posedge clock);
-      $display("%8t\t%4d\t\t%h", $time, address, q);
-      address = address + 1;
+    // Aguardar o início do clock
+    #50;
+
+    // Ler endereços válidos por mais tempo
+    repeat (200) begin // Aumentado para 30 ciclos
+      #100;
+      address = address + 4; // Incrementar endereço em passos de 4
     end
 
-    $stop;
+    // Finalizar simulação após mais ciclos
+    $finish;
   end
 
 endmodule
